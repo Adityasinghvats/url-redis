@@ -21,7 +21,15 @@ http://localhost:3000/api/v1
 ### Request `raw`
 ```javascript
 {
-    "url":"https://www.youtube.com/watch?v=5La12L8g1Ys"
+    "url":"https://github.com/Adityasinghvats/url-redis/blob/main/api/helpers/helpers.go",
+    "short": "urlproject",
+    "expiry": 5
+}
+```
+- or just
+```javascript
+{
+    "url":"https://github.com/Adityasinghvats/url-redis/blob/main/api/helpers/helpers.go"
 }
 ```
 
@@ -30,11 +38,11 @@ The response to this request is in JSON format with the following schema:
 
 ```JSON
 {
-    "url": "",
-    "short": "",
-    "expiry": 0,
-    "rate_limit": 0,
-    "rate_limit_reset": 0
+    "url": "https://github.com/Adityasinghvats/url-redis/blob/main/api/helpers/helpers.go",
+    "short": "localhost:3000/urlproject",
+    "expiry": 5,
+    "rate_limit": 9,
+    "rate_limit_reset": 30
 }
 ```
 > The response includes the keys `"url", "short", "expiry", "rate_limit", and "rate_limit_reset"`. The `"url"` and `"short"` values are `strings`, while `"expiry"`, `"rate_limit"`, and `"rate_limit_reset"` are `numeric` values.
