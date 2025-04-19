@@ -7,6 +7,7 @@ import (
 
 	"github.com/adix/shortapi/database"
 	"github.com/adix/shortapi/helpers"
+	"github.com/asaskevich/govalidator"
 	"github.com/go-redis/redis/v8"
 	"github.com/google/uuid"
 
